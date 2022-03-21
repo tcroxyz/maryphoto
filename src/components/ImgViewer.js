@@ -2,6 +2,7 @@ import { ImageList, ImageListItem } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client";
 import styled from "styled-components";
+import { SRLWrapper } from "simple-react-lightbox";
 
 function ImgViewer() {
   const [photoData, setPhoto] = useState(null);
@@ -24,34 +25,52 @@ function ImgViewer() {
       .then((data) => setPhoto(data))
       .catch(console.error);
   }, []);
+
+  const options = {
+    buttons: {
+      backgroundColor: "rgba(30,30,36,0.8)",
+      iconColor: "rgba(255, 255, 255, 0.8)",
+      iconPadding: "10px",
+      showAutoplayButton: true,
+      showCloseButton: true,
+      showDownloadButton: false,
+      showFullscreenButton: true,
+      showNextButton: true,
+      showPrevButton: true,
+      showThumbnailsButton: true,
+      size: "40px",
+    },
+  };
   return (
-    <ImageBox>
-      <ImageList variant="quilted" cols={4} rowHeight={200}>
-        {photoData &&
-          photoData.map((photo, index) => (
-            <ImageListItem
-              key={photo.mainImage}
-              cols={
-                pattern[
-                  index - Math.floor(index / pattern.length) * pattern.length
-                ].cols
-              }
-              rows={
-                pattern[
-                  index - Math.floor(index / pattern.length) * pattern.length
-                ].rows
-              }
-            >
-              <img
-                src={photo.mainImage.asset.url}
-                alt={photo.title}
-                className=""
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-      </ImageList>
-    </ImageBox>
+    <SRLWrapper options={options}>
+      <ImageBox>
+        <ImageList variant="quilted" cols={4} rowHeight={200}>
+          {photoData &&
+            photoData.map((photo, index) => (
+              <ImageListItem
+                key={photo.mainImage}
+                cols={
+                  pattern[
+                    index - Math.floor(index / pattern.length) * pattern.length
+                  ].cols
+                }
+                rows={
+                  pattern[
+                    index - Math.floor(index / pattern.length) * pattern.length
+                  ].rows
+                }
+              >
+                <img
+                  src={photo.mainImage.asset.url}
+                  alt={photo.title}
+                  className=""
+                  loading="lazy"
+                />
+              </ImageListItem>
+            ))}
+        </ImageList>
+      </ImageBox>
+    </SRLWrapper>
   );
 }
 
