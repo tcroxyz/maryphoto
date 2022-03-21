@@ -1,9 +1,9 @@
 React
 
-<SanityIO />
+Sanity IO
 
-<Simple-React-Lightbox />
+Simple-React-Lightbox
 
-<MUI />
+MUI
 
-<Styled-Components />
+Styled-Components
