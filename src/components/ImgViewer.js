@@ -44,7 +44,7 @@ function ImgViewer() {
   return (
     <SRLWrapper options={options}>
       <ImageBox>
-        <ImageList variant="quilted" cols={4} rowHeight={200}>
+        <ImageList variant="quilted" cols={4} gap={10} rowHeight={200}>
           {photoData &&
             photoData.map((photo, index) => (
               <ImageListItem

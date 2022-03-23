@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         font-family: 'Roboto', sans-serif;
         font-size: 1.2rem;
+        scroll-behavior: smooth;
     }
 
     body {

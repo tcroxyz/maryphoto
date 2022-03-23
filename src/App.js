@@ -1,9 +1,12 @@
 import ImgViewer from "./components/ImgViewer";
-import styled from "styled-components";
+import Header from "./components/Header";
+import About from "./components/About";
 
 function App() {
   return (
     <div className="App">
+      <Header />
+      <About />
       <ImgViewer />
     </div>
   );
