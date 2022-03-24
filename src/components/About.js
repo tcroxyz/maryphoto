@@ -16,7 +16,7 @@ function About() {
           component="img"
           height="500"
           image={bgimage}
-          alt="green iguana"
+          alt="Mary Mac"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -29,31 +29,34 @@ function About() {
           </Typography>
         </CardContent>
       </Card>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Something
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
-            dicta reprehenderit minima provident, vitae vel, distinctio earum
-            magni blanditiis architecto delectus soluta non quae eveniet sequi
-            aperiam iure maiores eligendi, velit possimus error fugit tempore?
-            Et, ducimus repellat deserunt odio repellendus vel eligendi ex sequi
-            vero reiciendis nesciunt, vitae odit ullam dolorem ipsa. Recusandae
-            saepe nobis fugiat ut tempora. Cupiditate nam exercitationem dolores
-            doloremque sequi ea culpa assumenda, aliquid ratione quae
-            dignissimos maxime iure veritatis tempora distinctio necessitatibus?
-            Officiis tempora necessitatibus iste illum. Nesciunt alias libero,
-            sapiente consequatur, aperiam adipisci repudiandae reprehenderit
-            ipsa ab esse et quis soluta enim. Perferendis.
-          </Typography>
-        </CardContent>
-        <CardActions>
-          <Button size="small">Share</Button>
-          <Button size="small">Learn More</Button>
-        </CardActions>
-      </Card>
+      <LeftCard>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Something
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid
+              dicta reprehenderit minima provident, vitae vel, distinctio earum
+              magni blanditiis architecto delectus soluta non quae eveniet sequi
+              aperiam iure maiores eligendi, velit possimus error fugit tempore?
+              Et, ducimus repellat deserunt odio repellendus vel eligendi ex
+              sequi vero reiciendis nesciunt, vitae odit ullam dolorem ipsa.
+              Recusandae saepe nobis fugiat ut tempora. Cupiditate nam
+              exercitationem dolores doloremque sequi ea culpa assumenda,
+              aliquid ratione quae dignissimos maxime iure veritatis tempora
+              distinctio necessitatibus? Officiis tempora necessitatibus iste
+              illum. Nesciunt alias libero, sapiente consequatur, aperiam
+              adipisci repudiandae reprehenderit ipsa ab esse et quis soluta
+              enim. Perferendis.
+            </Typography>
+          </CardContent>
+          <CardActions>
+            <Button size="small">Share</Button>
+            <Button size="small">Learn More</Button>
+          </CardActions>
+        </Card>
+      </LeftCard>
     </MainAbout>
   );
 }
@@ -66,4 +69,21 @@ const MainAbout = styled.div`
   flex-direction: row;
   padding: 5rem;
   justify-content: space-evenly;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+`;
+
+const LeftCard = styled.div`
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+  @media (max-width: 900px) {
+    padding-top: 1rem;
+  }
 `;

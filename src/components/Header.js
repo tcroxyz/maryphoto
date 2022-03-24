@@ -11,7 +11,8 @@ function Header() {
         <MenuIcon />
       </Heading>
       <HeroTextStyle>
-        <h1>Hero Text</h1>
+        <h1>Mary Mac</h1>
+        <HeroTextHighlight>Photography</HeroTextHighlight>
       </HeroTextStyle>
     </HeroContainer>
   );
@@ -33,9 +34,20 @@ const HeroTextStyle = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-bottom: 3rem;
+
+  @media (max-width: 500px) {
+    min-height: 50vh;
+  }
 
   h1 {
-    font-size: 3rem;
+    font-size: 4.5rem;
+    font-weight: 200;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 500px) {
+      font-size: 3rem;
+    }
   }
 `;
 
@@ -44,4 +56,14 @@ const HeroContainer = styled.div`
   background-image: url(${bgimage});
   background-repeat: none;
   background-size: cover;
+`;
+
+const HeroTextHighlight = styled.span`
+  color: white;
+  font-size: 3.5rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+
+  @media (max-width: 500px) {
+    font-size: 2.5rem;
+  }
 `;
