@@ -80,7 +80,7 @@ const MainAbout = styled.div`
 
 const LeftCard = styled.div`
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   display: flex;
 
   @media (max-width: 900px) {

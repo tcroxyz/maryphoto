@@ -7,7 +7,7 @@ function Header() {
   return (
     <HeroContainer>
       <Heading>
-        <h1>MaryMac.</h1>
+        <LogoText>MaryMac.</LogoText>
         <MenuIcon />
       </Heading>
       <HeroTextStyle>
@@ -65,5 +65,13 @@ const HeroTextHighlight = styled.span`
 
   @media (max-width: 500px) {
     font-size: 2.5rem;
+  }
+`;
+
+const LogoText = styled.h1`
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+  @media (min-width: 500px) {
+    font-size: 1.6rem;
   }
 `;
