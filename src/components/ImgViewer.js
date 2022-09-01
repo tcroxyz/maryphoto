@@ -123,7 +123,10 @@ export default ImgViewer;
 const ImageBox = styled.div`
   margin: 1rem;
   background-color: var(--background-light-color);
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 768px) {
     margin: 1rem;

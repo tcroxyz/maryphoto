@@ -25,6 +25,12 @@ const Heading = styled.div`
   justify-content: space-around;
   align-items: center;
   padding-top: 1.5rem;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 `;
 
 const HeroTextStyle = styled.div`
@@ -44,6 +50,12 @@ const HeroTextStyle = styled.div`
     font-size: 4.5rem;
     font-weight: 200;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
 
     @media (max-width: 500px) {
       font-size: 3rem;
@@ -62,6 +74,12 @@ const HeroTextHighlight = styled.span`
   color: white;
   font-size: 3.5rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.25);
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 
   @media (max-width: 500px) {
     font-size: 2.5rem;
