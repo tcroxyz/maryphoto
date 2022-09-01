@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   justify-content: center;
   background-color: var(--background-dark-color);
   padding: 0px 60px;
-  padding-top: 50px;
+  padding-top: 30px;
 `;
 const Column = styled.div`
   display: flex;
@@ -51,7 +51,7 @@ const Row = styled.div`
 `;
 const Link = styled.div`
   color: var(--secondary-color);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 18px;
   text-decoration: none;
 
@@ -64,15 +64,15 @@ const Link = styled.div`
 const Title = styled.div`
   font-size: 20px;
   color: var(--primary-color);
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-weight: bold;
 `;
 
 const LowTitle = styled.div`
   font-size: 16px;
   color: var(--primary-color);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-weight: light;
   align-self: center;
-  padding-top: 20px;
+  margin-top: 10px;
 `;
