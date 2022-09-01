@@ -42,35 +42,44 @@ function ImgViewer() {
     },
   };
   return (
-    <SRLWrapper options={options}>
-      <ImageBox>
-        <ImageList variant="quilted" cols={4} gap={10} rowHeight={200}>
-          {photoData &&
-            photoData.map((photo, index) => (
-              <ImageListItem
-                key={photo.mainImage}
-                cols={
-                  pattern[
-                    index - Math.floor(index / pattern.length) * pattern.length
-                  ].cols
-                }
-                rows={
-                  pattern[
-                    index - Math.floor(index / pattern.length) * pattern.length
-                  ].rows
-                }
-              >
-                <img
-                  src={photo.mainImage.asset.url}
-                  alt={photo.title}
-                  className=""
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-        </ImageList>
-      </ImageBox>
-    </SRLWrapper>
+    <>
+      <PhotoboxText>
+        <p>All media &copy;MaryMac.</p>
+        <h3>Click photos to enlarge</h3>
+      </PhotoboxText>
+
+      <SRLWrapper options={options}>
+        <ImageBox>
+          <ImageList variant="quilted" cols={4} gap={10} rowHeight={200}>
+            {photoData &&
+              photoData.map((photo, index) => (
+                <ImageListItem
+                  key={photo.mainImage}
+                  cols={
+                    pattern[
+                      index -
+                        Math.floor(index / pattern.length) * pattern.length
+                    ].cols
+                  }
+                  rows={
+                    pattern[
+                      index -
+                        Math.floor(index / pattern.length) * pattern.length
+                    ].rows
+                  }
+                >
+                  <img
+                    src={photo.mainImage.asset.url}
+                    alt={photo.title}
+                    className=""
+                    loading="lazy"
+                  />
+                </ImageListItem>
+              ))}
+          </ImageList>
+        </ImageBox>
+      </SRLWrapper>
+    </>
   );
 }
 
@@ -113,9 +122,26 @@ export default ImgViewer;
 
 const ImageBox = styled.div`
   margin: 1rem;
-  background-color: #333;
+  background-color: var(--background-light-color);
+  cursor: pointer;
 
   @media (min-width: 768px) {
     margin: 1rem;
+  }
+`;
+
+const PhotoboxText = styled.div`
+  p {
+    font-size: 0.75rem;
+    font-weight: 100;
+    margin-left: 20px;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-left: 20px;
+    padding: 0;
   }
 `;

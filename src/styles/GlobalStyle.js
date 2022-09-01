@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: var(--background-dark-color);
+        background-color: var(--background-light-color);
         color: var(--font-light-color)
     }
 
