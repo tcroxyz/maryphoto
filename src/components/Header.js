@@ -8,7 +8,7 @@ function Header() {
     <HeroContainer>
       <Heading>
         <LogoText>MaryMac.</LogoText>
-        <MenuIcon />
+        {/* <MenuIcon /> */}
       </Heading>
       <HeroTextStyle>
         <h1>Mary Mac</h1>
