@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
         --secondary-color: #6c757d;
         --background-dark-color: #333;
         --border-color: #2e344e;
-        --background-light-color: #f1f1f1;
+        --background-light-color: #d4d4d4;
     }
     
     *{

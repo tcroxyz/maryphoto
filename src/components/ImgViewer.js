@@ -40,6 +40,10 @@ function ImgViewer() {
       showThumbnailsButton: true,
       size: "40px",
     },
+    settings: {
+      overlayColor: "rgba(14, 14, 14, 0.9)",
+      autoplaySpeed: 10000,
+    },
   };
   return (
     <>
